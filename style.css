@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+h1 {
+padding: 2em 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.center h2 {
+    text-align: center;
+    color: slategray;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+
+}
+.center .stars {
+  height: 10em;
+  width: 30em;
+  text-align: center;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  float: right;
+  font-size: 6em;
+  color: lightgrey;
+  margin: 0 0.08em;
+  text-shadow: 1px 1px #bbb;
+  transition: all 0.35s ease-in-out;
+  text-align: center;
+}
+.stars label:before {
+  content: '★';
+}
+.stars input:checked ~ label {
+  color: gold;
+  transform: scale(1.15);
+}
+
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label {
+  color: gold;
+  transform: scale(1.1);
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label {
+  color: gold;
+  
+}
+/** 
+.stars .result:before{
+  content: "";
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+}
+.stars input:checked ~ .result:before{
+  display: block;
+}
+.stars #five:checked ~ .result:before
+{
+  content: "😊";
+}
+.stars #four:checked ~ .result:before{
+  content: "😀";
+}
+.stars #three:checked ~ .result:before{
+  content: "😐";
+}
+.stars #two:checked ~ .result:before{
+  content: "😠";
+}
+.stars #one:checked ~ .result:before{
+  content: "😤";
+}
+**/
+.rateButton,
+.reviewButton {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  margin: 2em 0;
+  padding: 1em 3em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  display: none;
+  margin-bottom: 3em;
+  transition: all 1s ease-in;
+}
+
+.container-active {
+  display: block;
+}
+
+.badReviewForm {
+  display: none;
+}
+
+.badReviewFormEnd {
+  display: none;
+}
+
+.badReviewFormEndActive {
+  display: block;
+}
+
+.badReviewFormActive {
+  display: block;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.leaveReviewN {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.complaint-form textarea {
+  padding: 0.5em;
+  border: 2px solid #eee;
+}
+
+.complaint-form textarea:focus {
+  outline: none;
+  border: 2px solid #ddd;
+}
+
+.reviewButtonGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.reviewButtonGroup a {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.noReview {
+  background-color: white;
+  color: black;
+}
+
+.yesReview {
+  background-color: green;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px;
+}
+
+.review-tab {
+  display:none;
+}
+
+.review-tab-active {
+  display: block;
+}
